@@ -1,0 +1,77 @@
+\BOOKMARK [1][-]{section.1}{What is Newman?}{}
+\BOOKMARK [1][-]{section.2}{Installation}{}
+\BOOKMARK [2][-]{subsubsection.2.0.1}{MPI}{section.2}
+\BOOKMARK [3][-]{subsubsection.2.0.2}{GSL}{subsubsection.2.0.1}
+\BOOKMARK [2][-]{subsection.2.1}{Make Newman}{section.2}
+\BOOKMARK [1][-]{section.3}{Running Newman}{}
+\BOOKMARK [1][-]{section.4}{Viewing the Results}{}
+\BOOKMARK [2][-]{subsection.4.1}{Tecplot Format}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{Matlab Format}{section.4}
+\BOOKMARK [1][-]{section.5}{Output format}{}
+\BOOKMARK [1][-]{section.6}{Parameters}{}
+\BOOKMARK [2][-]{subsection.6.1}{Atmos\137Radius}{section.6}
+\BOOKMARK [2][-]{subsection.6.2}{Atmos\137Set}{section.6}
+\BOOKMARK [2][-]{subsection.6.3}{Boundary\137InFile}{section.6}
+\BOOKMARK [2][-]{subsection.6.4}{Boundary\137Method}{section.6}
+\BOOKMARK [2][-]{subsection.6.5}{Data\137Format}{section.6}
+\BOOKMARK [2][-]{subsection.6.6}{Data\137InFile}{section.6}
+\BOOKMARK [2][-]{subsection.6.7}{Data\137Max[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.8}{Data\137Min[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.9}{Data\137NonUniformGridND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.10}{Data\137NumInputFiles}{section.6}
+\BOOKMARK [2][-]{subsection.6.11}{Data\137Periodic[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.12}{Data\137Res[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.13}{Data\137TDelta}{section.6}
+\BOOKMARK [2][-]{subsection.6.14}{Data\137TMin}{section.6}
+\BOOKMARK [2][-]{subsection.6.15}{Data\137TPeriodic}{section.6}
+\BOOKMARK [2][-]{subsection.6.16}{Data\137TRes}{section.6}
+\BOOKMARK [2][-]{subsection.6.17}{Filter\137Width}{section.6}
+\BOOKMARK [2][-]{subsection.6.18}{FTLE\137Compute}{section.6}
+\BOOKMARK [2][-]{subsection.6.19}{FTLE\137IntTLength}{section.6}
+\BOOKMARK [2][-]{subsection.6.20}{FTLE\137Max[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.21}{FTLE\137Min[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.22}{FTLE\137OutFile}{section.6}
+\BOOKMARK [2][-]{subsection.6.23}{FTLE\137Res[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.24}{FTLE\137TrackWidth[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.25}{Int\137AbsTol}{section.6}
+\BOOKMARK [2][-]{subsection.6.26}{Int\137MaxTimeStep}{section.6}
+\BOOKMARK [2][-]{subsection.6.27}{Int\137Method}{section.6}
+\BOOKMARK [2][-]{subsection.6.28}{Int\137MinTimeStep}{section.6}
+\BOOKMARK [2][-]{subsection.6.29}{Int\137RelTol}{section.6}
+\BOOKMARK [2][-]{subsection.6.30}{Int\137TimeStep}{section.6}
+\BOOKMARK [2][-]{subsection.6.31}{MapCoord}{section.6}
+\BOOKMARK [2][-]{subsection.6.32}{Nest\137NumNests}{section.6}
+\BOOKMARK [2][-]{subsection.6.33}{Nest\137List}{section.6}
+\BOOKMARK [2][-]{subsection.6.34}{Output\137TDelta}{section.6}
+\BOOKMARK [2][-]{subsection.6.35}{Output\137TRes}{section.6}
+\BOOKMARK [2][-]{subsection.6.36}{Output\137T1}{section.6}
+\BOOKMARK [2][-]{subsection.6.37}{Parallel\137LoadRatio}{section.6}
+\BOOKMARK [2][-]{subsection.6.38}{Parameters\137Print}{section.6}
+\BOOKMARK [2][-]{subsection.6.39}{Path\137Input}{section.6}
+\BOOKMARK [2][-]{subsection.6.40}{Path\137Output}{section.6}
+\BOOKMARK [2][-]{subsection.6.41}{Path\137Work}{section.6}
+\BOOKMARK [2][-]{subsection.6.42}{Path\137Scratch}{section.6}
+\BOOKMARK [2][-]{subsection.6.43}{Plot\137Max[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.44}{Plot\137Min[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.45}{Plot\137OutFile}{section.6}
+\BOOKMARK [2][-]{subsection.6.46}{Plot\137Res[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.47}{Plot\137Velocity}{section.6}
+\BOOKMARK [2][-]{subsection.6.48}{Query\137Velocity}{section.6}
+\BOOKMARK [2][-]{subsection.6.49}{Query\137X[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.50}{Time\137Direction}{section.6}
+\BOOKMARK [2][-]{subsection.6.51}{Time\137Origin}{section.6}
+\BOOKMARK [2][-]{subsection.6.52}{Trace\137ColorDimension}{section.6}
+\BOOKMARK [2][-]{subsection.6.53}{Trace\137Compute}{section.6}
+\BOOKMARK [2][-]{subsection.6.54}{Trace\137GenerateMesh}{section.6}
+\BOOKMARK [2][-]{subsection.6.55}{Trace\137InFile}{section.6}
+\BOOKMARK [2][-]{subsection.6.56}{Trace\137MeshColor }{section.6}
+\BOOKMARK [2][-]{subsection.6.57}{Trace\137MeshMax[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.58}{Trace\137MeshMin[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.59}{Trace\137MeshReleaseTime}{section.6}
+\BOOKMARK [2][-]{subsection.6.60}{Trace\137MeshRes[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.61}{Trace\137OutFile}{section.6}
+\BOOKMARK [2][-]{subsection.6.62}{Track\137InFile}{section.6}
+\BOOKMARK [2][-]{subsection.6.63}{Track\137Storm}{section.6}
+\BOOKMARK [2][-]{subsection.6.64}{V[ND]}{section.6}
+\BOOKMARK [2][-]{subsection.6.65}{Velocity\137Format}{section.6}
+\BOOKMARK [2][-]{subsection.6.66}{Velocity\137Null[ND]}{section.6}
