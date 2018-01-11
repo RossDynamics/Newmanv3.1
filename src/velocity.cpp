@@ -24,9 +24,46 @@ void GetCodedVelocity(double t, double *X, double *dXdt) {
   
 #if ND==2
    
-    
-
-
+  //Bickley Jet Fixed Reference Frame
+  
+  const double vel_initial = 62.66;//m s^-1
+  //U0 = U0./1000.*60;%km min^-1
+  const double U0 = vel_initial/(double)1000;//km s^-1
+  const double L = 1770.0;//km lenght scale
+  const double A2 = 0.1; //wave 1 wave amplitude
+  const double A3 = 0.3; //wave 2 wave amplitude
+  const double c2 = 0.205*U0; //wave 1 wave speed
+  const double c3 = 0.461*U0; //wave 2 wave speed
+  const int re = 6371;//km earths radius
+  const double k2 = (double)4/(double)re;
+  const double k3 = (double)6/(double)re;
+  
+  //v = -k(3).*A3.*L.*U0.*((sech(y./L)).^2).*sin(k(3).*(x-c3.*t)) - k(2).*A2.*L.*U0.*((sech(y./L)).^2).*sin(k(2).*(x-c2.*t));
+  //-u = - U0.*((sech(y./L)).^2) - 2.*A3.*U0.*tanh(y./L).*((sech(y./L)).^2).*cos(k(3).*(x-c3.*t)) - 2.*A2.*U0.*tanh(y./L).*((sech(y./L)).^2).*cos(k(2).*(x-c2.*t));
+  
+  dXdt[0] = U0*pow(1.0/cosh(X[1]/L),2) + 2*A3*U0*tanh(X[1]/L)*pow(1.0/cosh(X[1]/L),2)*cos(k3*(X[0]-c3*t)) + 2*A2*U0*tanh(X[1]/L)*pow(1.0/cosh(X[1]/L),2)*cos(k2*(X[0]-c2*t));
+  dXdt[1] = -k3*A3*L*U0*pow(1.0/cosh(X[1]/L),2)*sin(k3*(X[0]-c3*t)) - k2*A2*L*U0*pow(1.0/cosh(X[1]/L),2)*sin(k2*(X[0]-c2*t));
+  
+  //Bickley Jet Moving Reference Frame
+  /*
+  const double vel_initial = 62.66;//m s^-1
+  //U0 = U0./1000.*60;%km min^-1
+  const double U0 = vel_initial/(double)1000;//km s^-1
+  const double L = 1770.0;//km lenght scale
+  const double A2 = 0.1; //wave 1 wave amplitude
+  const double A3 = 0.3; //wave 2 wave amplitude
+  const double c2 = 0.205*U0; //wave 1 wave speed
+  const double c3 = 0.461*U0; //wave 2 wave speed
+  const int re = 6371;//km earths radius
+  const double k2 = (double)4/(double)re;
+  const double k3 = (double)6/(double)re;
+  const double sigma2 = k2*(c2-c3);
+  //-u = c3 - U0.*((sech(y./L)).^2) - 2.*A3.*U0.*((sech(y./L)).^2).*tanh(y./L).*cos(k(3).*x) - 2.*A2.*U0.*((sech(y./L)).^2).*tanh(y./L).*cos(k(2).*x-sigma2.*t);
+  //v = - k(3).*A3.*U0.*L.*((sech(y./L)).^2).*sin(k(3).*x) - k(2).*A2.*U0.*L.*((sech(y./L)).^2).*sin(k(2).*x-sigma2.*t);
+  dXdt[0] = - c3 + U0*pow(1.0/cosh(X[1]/L),2) + 2*A3*U0*pow(1.0/cosh(X[1]/L),2)*tanh(X[1]/L)*cos(k3*X[0]) + 2*A2*U0*pow(1.0/cosh(X[1]/L),2)*tanh(X[1]/L)*cos(k2*X[0]-sigma2*t);
+  dXdt[1] = - k3*A3*U0*L*pow(1.0/cosh(X[1]/L),2)*sin(k3*X[0]) - k2*A2*U0*L*pow(1.0/cosh(X[1]/L),2)*sin(k2*X[0]-sigma2*t);
+  */
+  
   //Hill's Vortex
   /*dXdt[0] = 2.0*X[0]*X[1];
   dXdt[1] = -2.0*(2.0*X[0]*X[0]-1.0) - 2.0*X[1]*X[1];*/
@@ -47,11 +84,17 @@ void GetCodedVelocity(double t, double *X, double *dXdt) {
     dXdt[1] = -1.0;*/
     
   //Pendulum
- 
-    
+  /*
   dXdt[0] = X[1];
   dXdt[1] = -sin(X[0])-Pendulum_Amplitude*X[1]*sin(M_PI*t);
-  
+  */
+
+  // Double Gyre
+  /*
+  dXdt[0] = -M_PI*sin(M_PI*X[0])*cos(M_PI*X[1]);
+  dXdt[1] = M_PI*cos(M_PI*X[0])*sin(M_PI*X[1]);
+  */
+
   //Hurricane
 
   /*const double sqrtterm = sqrt(1.0+4.0*Eye_alpha);
